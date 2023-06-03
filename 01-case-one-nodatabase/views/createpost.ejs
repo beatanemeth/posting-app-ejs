@@ -1,0 +1,31 @@
+<%- include("partials/header"); -%>
+
+    <section>
+
+        <h1>Create Post</h1>
+        <hr>
+
+        <form id="createPostForm" action="/createpost" method="POST">
+
+            <div class="formGroup">
+                <label for="postTitle">Post Title</label>
+                <input type="text" id="postTitle" name="postTitle" placeholder="Post Title">
+            </div>
+            <div class="formGroup">
+                <label for="postContent">Post Content</label>
+                <textarea name="postContent" id="postContent" placeholder="Enter your post..."></textarea>
+            </div>
+            <div class="formAction">
+                <button type="submit">Create post</button>
+            </div>
+        </form>
+
+        <div class="formAction">
+            <a href="/logout">
+                <button type="button">Logout</button>
+            </a>
+        </div>
+
+    </section>
+
+    <%- include("partials/footer"); -%>

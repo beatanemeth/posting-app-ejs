@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
+
+
+:root {
+    --moderate-pink: rgb(207, 71, 123);
+    --dark-pink: rgb(174, 45, 94);
+    font-size: 18px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Merriweather Sans", sans-serif;
+}
+
+button,
+.formGroup input,
+a {
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+
+/*** Header ***/
+header {
+    padding: .8% 10%;
+    display: flex;
+    align-items: center;
+    min-height: 5%;
+    margin-bottom: -6%;
+    background-color: var(--moderate-pink);
+    box-shadow: 0 0 25px 5px var(--dark-pink);
+}
+
+header h3,
+header a {
+    color: #FFF;
+}
+
+header img {
+    border-radius: 50%;
+    max-width: 10%;
+    height: auto;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav {
+    margin-left: auto;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul :nth-child(2),
+nav ul :nth-child(4) {
+    margin: 0 8%;
+}
+
+
+/*** Read More or Less Button ***/
+#more {
+    display: none;
+}
+
+#moreBtn,
+#toggleLoginRegister {
+    border: none;
+    background-color: rgba(207, 71, 123, 0.1);
+    color: var(--dark-pink);
+    padding: .1% .5%;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+/*** Devider ***/
+hr {
+    border-top: 1rem dotted var(--moderate-pink);
+    opacity: 0.4;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    width: 8%;
+    margin: 5% auto;
+}
+
+h1+hr,
+h2+hr {
+    width: 30%;
+    margin: 1rem auto;
+    border: 2px solid var(--moderate-pink);
+}
+
+
+/*** Section Element ***/
+section {
+    padding: 5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 3rem auto;
+}
+
+
+section h1 {
+    margin: 1rem 0;
+}
+
+
+/*** Oops Page ***/
+#oops {
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("https://images.pexels.com/photos/265152/pexels-photo-265152.jpeg?cs=srgb&dl=pexels-pixabay-265152.jpg&fm=jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#oopsSection {
+    display: block;
+    max-width: 60%;
+    padding: 2%;
+    color: #FFF;
+    background-color: rgba(207, 71, 123, .3);
+    box-shadow: 0 0 10px 5px var(--dark-pink);
+}
+
+
+/*** Auth Form and Create Post Form ***/
+form {
+    border: solid 2px var(--dark-pink);
+    max-width: 60rem;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.formGroup {
+    margin-bottom: 0.5rem;
+}
+
+.formGroup input,
+.formGroup textarea {
+    display: block;
+    font: inherit;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--dark-pink);
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    background-color: rgba(174, 45, 94, .1);
+}
+
+textarea {
+    resize: vertical;
+    overflow: auto;
+}
+
+.formAction {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formAction button,
+#editPost button {
+    cursor: pointer;
+    color: #FFF;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: var(--dark-pink);
+    border: 1px solid var(--dark-pink);
+    border-radius: 4px;
+    padding: 0.5rem 2.5rem;
+}
+
+.formAction button:hover,
+#editBtn button:hover {
+    background-color: var(--moderate-pink);
+    border-color: var(--moderate-pink);
+}
+
+#registerContainer,
+#updatePost {
+    display: none;
+}
+
+
+/*** Create Post Page ***/
+#createPostForm {
+    border: none;
+    width: 80%;
+    margin: 2rem auto;
+}
+
+
+/*** Accordion ***/
+#accordion h3 {
+    font-weight: 500;
+    text-align: left;
+    background-color: rgba(174, 45, 94, 0.4);
+    padding: 1%;
+    margin-top: 2%;
+    border: 1px solid var(--dark-pink);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#accordion div {
+    text-align: justify;
+    box-shadow: 5px 10px 20px var(--dark-pink);
+    padding: 3%;
+}
+
+
+/*** Footer ***/
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+    text-align: center;
+    margin-top: 2rem;
+    background-color: var(--dark-pink);
+}
+
+footer p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #FFF;
+}
+
+
+/*** Media Query ***/
+@media (max-width:767px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    nav ul :nth-child(2) {
+        margin: 2% 0;
+    }
+
+    header h3 {
+        font-size: 1rem;
+    }
+}

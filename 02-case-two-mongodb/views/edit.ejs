@@ -1,0 +1,30 @@
+<%- include("partials/header"); -%>
+
+    <section>
+
+        <h1>
+            <%= postTitle %>
+        </h1>
+
+        <p>
+            <%= postContent %>
+        </p>
+
+        <div id="editPost">
+            <a href="/blog/editpost">
+                <button type="button" id="editBtn">Edit</button>
+            </a>
+            <a href="/blog/delete">
+                <button type="button">Delete</button>
+            </a>
+        </div>
+
+        <div class="formAction">
+            <a href="/user/logout">
+                <button type="button">Logout</button>
+            </a>
+        </div>
+
+    </section>
+
+    <%- include("partials/footer"); -%>
